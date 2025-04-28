@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanjay's Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a href="#home" class="logo">
+        <div class="logo-stack">
+          <!-- Crown SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path  d="M5 16l-3-9 6 3 4-7 4 7 6-3-3 9H5zm0 2h14v2H5v-2z"/>
+          </svg>
+          <span class="sk-text">SK</span>
+        </div>
+      </a>
+      
+    
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <div id="theme-toggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Hi, It's <span>Sanjaykumar</span></h1>
+      <div class="typing-wrapper">
+        <h3>I'm a&nbsp;</h3>
+        <h3><span class="typewriter-text"></span></h3>
+      </div>
+      <p>I specialize in creating responsive, user-friendly websites and web applications. With a passion for clean code and innovative design, I bring ideas to life through modern web technologies. Let's build something amazing together!</p>
+      <div class="social-icons">
+        <a href="https://github.com/Sanjaykumar-tech" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/sanjay-kumar-7a8731324/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="https://www.instagram.com/sanjaykumar.tech/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="https://x.com/sanjaykumar_x" target="_blank"><i class="bx bxl-twitter"></i></a>
+      </div>
+      <div class="btn-group">
+        <a href="#contact" class="btn">Hire</a>
+        <a href="sanjaykumar CV.pdf" class="btn">Download CV</a>
+      </div>
+    </div>
+    <div class="home-img">
+      <img src="profile 1.jpg" alt="Sanjaykumar's Profile">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="profile 2.png" alt="Sanjaykumar's Photo">
+    </div>
+    <div class="about-content">
+      <h2>About <span>Me</span></h2>
+      <p>
+        I’m Sanjaykumar from Gunamangalam, a creative and talkative soul passionate about tech and motivation.
+        <span id="dots">...</span>
+      </p>
+  
+      <div id="full-text" style="display: none;">
+        <p>
+          Life after college gave me a whole new mindset. I realized that success is not just about marks or a job — it’s about purpose. I started chasing growth with a fire in me, working harder than ever and taking every failure as a lesson. My empty days turned into days of planning, learning, and self-discovery.
+        </p>
+        <p>
+          Coming from Gunamangalam, a small village in Ulundurpet, I carry the strength of simplicity and the hunger to prove that even from the most humble beginnings, greatness can rise. I’ve built my skillset in web development, started exploring full stack, and dream of becoming a creator who empowers others through both tech and voice.
+        </p>
+        <p>
+          I'm not just passionate about tech — I’m also drawn to motivational speaking. I believe that a few right words at the right time can change someone’s life. That’s what I want to do — build digital tools and build people up. My goal is not only to grow, but to help others grow too. That’s the mission. That’s the mindset.
+        </p>
+      </div>
+      
+  
+      <button class="btn" id="readBtn" onclick="toggleReadMore()">Read More</button>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2 class="heading">Skills</h2>
+    <div class="skills-container">
+      <div class="skill-box">
+        <i class="fab fa-html5"></i>
+        <span>HTML</span>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-css3-alt"></i>
+        <span>CSS</span>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-js"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-react"></i>
+        <span>React</span>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-node-js"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="skill-box">
+        <i class="fas fa-database"></i>
+        <span>MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2 class="heading">Projects</h2>
+    <div class="projects-box">
+      <div class="project-card">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>E-Commerce Website</h3>
+        <p>Fully functional shopping platform with login, cart, and payment integration using React & Node.js.</p>
+      </div>
+      <div class="project-card">
+        <i class="fas fa-globe"></i>
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio to showcase my skills and projects using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <i class="fas fa-check-circle"></i>
+        <h3>To-Do WebApp</h3>
+        <p>Every task, one click closer to success. Built with HTML, CSS & JS.</p>
+      </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact Me</h2>
+  <form action="https://formsubmit.co/sanjaykumar.techdev@gmail.com" method="POST">
+    
+    <!-- Optional Settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://sanjaykumar-tech.github.io/portfolio//thank-you.html">
+
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <input type="number" name="phone" placeholder="Phone Number">
+        <input type="text" name="subject" placeholder="Subject">
+      </div>
+    </div>
+    <div class="input-group-2">
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </div>
+  </form>
+</section>
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://github.com/Sanjaykumar-tech" target="_blank"><i class="bx bxl-github"></i></a>
+      <a href="https://www.linkedin.com/in/sanjay-kumar-7a8731324/" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+      <a href="https://www.instagram.com/sanjaykumar.tech/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+      <a href="https://x.com/sanjaykumar_x" target="_blank"><i class="bx bxl-twitter"></i></a>
+    </div>
+    <ul class="list">
+      <li><a href="Sanjaykumar_FAQ.pdf">FAQ</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copyright">2025 © Sanjaykumar | All Rights Reserved</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <script src="script.js"></script>
+</body>
+</html>
