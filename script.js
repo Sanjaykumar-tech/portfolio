@@ -109,7 +109,7 @@ navLinks.forEach(link => {
     };
 
     try {
-      const res = await fetch("https://portfolio-backend-1-72na.onrender.com", {
+      const res = await fetch("https://portfolio-backend-1-72na.onrender.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
