@@ -109,7 +109,7 @@ navLinks.forEach(link => {
     };
 
     try {
-      const res = await fetch("http://localhost:5500/contact", {
+      const res = await fetch("https://portfolio-backend-1-72na.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

@@ -17,7 +17,7 @@ app.post('/send', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'sanjaykumar.techdev@gmail.com',
-      pass: 'eqgh epvt pbuo vzrw' // ⚠️ Use App Password here
+      pass: 'pmkc jxwv tvic zmqd' // ⚠️ Use App Password here
     }
   });
 
