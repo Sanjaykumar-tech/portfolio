@@ -96,3 +96,38 @@ navLinks.forEach(link => {
   });
 });
 
+
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      phone: this.phone.value,
+      subject: this.subject.value,
+      message: this.message.value
+    };
+
+    try {
+      const res = await fetch("http://localhost:5500/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+        this.reset(); // clear form
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error sending message.");
+    }
+  });
+
