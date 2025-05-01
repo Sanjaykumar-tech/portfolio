@@ -7,7 +7,10 @@ const PORT = process.env.PORT || 5500;
 
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://sanjaykumar-tech.github.io'
+}));
+
 app.use(express.json()); // Use Express’s built-in JSON parser
 
 // POST route
