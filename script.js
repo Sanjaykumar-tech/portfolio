@@ -118,6 +118,7 @@ navLinks.forEach(link => {
       });
 
       const result = await res.json();
+      console.log(result);
 
       if (res.ok) {
         alert("Message sent successfully!");
