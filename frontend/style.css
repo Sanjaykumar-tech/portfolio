@@ -67,6 +67,12 @@ section {
   text-decoration: none;
 }
 
+.logo svg {
+  width: 24px;
+  height: 24px;
+  fill: #008000;
+}
+
 .logo .logo-stack {
   display: flex;
   flex-direction: column;
@@ -605,6 +611,12 @@ body.light-mode {
     display: none;
     flex-direction: column;
   }
+
+  body.light-mode.navbar  {
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
 
   .navbar.active {
     display: flex;

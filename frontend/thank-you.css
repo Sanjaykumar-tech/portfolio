@@ -1,0 +1,56 @@
+body {
+    background-color: #000;
+    color: #00ff88;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .thank-you-box {
+    text-align: center;
+  }
+  
+  .thank-you-box h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff88;
+  }
+
+  .thank-you-box p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    background-color: #00ff88;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .btn:hover {
+    background-color: #00cc66;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @media (max-width: 600px) {
+    .thank-you-box h1 {
+      font-size: 2rem;
+    }
+    .thank-you-box p {
+      font-size: 1rem;
+    }
+  }
+  

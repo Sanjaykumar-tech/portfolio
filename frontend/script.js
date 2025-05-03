@@ -121,8 +121,7 @@ navLinks.forEach(link => {
       console.log(result);
 
       if (res.ok) {
-        alert("Message sent successfully!");
-        this.reset(); // clear form
+        window.location.href = "thank-you.html";
       } else {
         alert("Failed to send message.");
       }

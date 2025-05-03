@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import { createTransport } from 'nodemailer';
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Load environment variables from .env file
 
 const app = express();
 const PORT = process.env.PORT || 5500;
@@ -17,11 +20,17 @@ app.use(express.json()); // Use Express’s built-in JSON parser
 app.post('/send', async (req, res) => {
   const { name, email, subject, phone, message } = req.body;
 
-  const transporter = createTransport({
+   // Check if all required fields are present
+   if (!name || !email || !subject || !phone || !message) {
+    return res.status(400).json({ error: 'Please fill in all required fields.' });
+   }
+
+// Setup transporter
+  const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'sanjaykumar.techdev@gmail.com',
-      pass: 'gthl ewbe bnfn sgkl' // ⚠️ Use App Password here
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASS// ⚠️ Use App Password here
     }
   });
 
