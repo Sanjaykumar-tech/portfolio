@@ -8,7 +8,6 @@
    CSS VARIABLES
 ==================================================== */
 :root {
-  --header-height: 8rem;
   --bg-color: #080808;
   --second-bg-color: #101010;
   --text-color: white;
@@ -1266,6 +1265,19 @@ textarea:focus:invalid {
     right: 15px;
     top: 25px;
   }
+
+  #menu-icon {
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+  
+  #menu-icon i.bx-menu {
+    color: var(--main-color) !important; /* Green color */
+    font-size: 3.2rem !important;
+    text-shadow: 0 0 5px rgba(0,128,0,0.3);
+  }
   
   .theme-toggle {
     right: 70px;
@@ -1297,6 +1309,17 @@ textarea:focus:invalid {
     text-align: center;
   }
 
+  .btn-group .btn {
+    padding: 1.2rem 2rem !important;
+    font-size: 1.4rem !important;
+    min-width: 120px !important;
+  }
+  
+  .btn-group {
+    gap: 1rem !important;
+    justify-content: center !important;
+  }
+
   .read-more-btn {
     margin: 1.5rem auto 0;
     display: block;
@@ -1315,6 +1338,14 @@ textarea:focus:invalid {
   .navbar a {
     padding: 1.5rem;
     text-align: center;
+  }
+
+  .home {
+    padding-top: 2rem !important;
+  }
+  
+  .home-content {
+    gap: 1.5rem !important;
   }
 
   /* === Mobile Header === */
