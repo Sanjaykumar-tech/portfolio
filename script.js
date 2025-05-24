@@ -21,6 +21,25 @@ document.querySelectorAll('.navbar a').forEach(link => {
   });
 });
 
+// Better mobile menu handling
+menuIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const isActive = menuIcon.classList.contains('active');
+  menuIcon.setAttribute('aria-expanded', isActive);
+  navbar.setAttribute('aria-hidden', !isActive);
+});
+
+// Close menu when tapping outside
+document.addEventListener('click', (e) => {
+  if (navbar.classList.contains('active') && 
+      !e.target.closest('.navbar') && 
+      !e.target.closest('#menu-icon')) {
+    menuIcon.classList.remove('active');
+    navbar.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  }
+});
+
 // Theme Toggle
 const themeSwitcher = document.getElementById('themeSwitcher');
 

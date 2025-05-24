@@ -8,6 +8,7 @@
    CSS VARIABLES
 ==================================================== */
 :root {
+  --header-height: 8rem;
   --bg-color: #080808;
   --second-bg-color: #101010;
   --text-color: white;
@@ -1254,6 +1255,36 @@ textarea:focus:invalid {
 }
 
 @media (max-width: 768px) {
+  /* === Mobile Header === */
+  :root { --header-height: 7rem; }
+  .header { padding: 1.5rem 5%; }
+
+  /* === Home Section === */
+  .home { margin-top: 3rem; gap: 3rem; }
+  .home-content h1 { font-size: 4.5rem; }
+  .home-img img { width: 80vw; max-width: 300px; }
+
+  /* === About Section === */
+  .about { gap: 4rem; }
+  .about-img img { width: 80vw; max-width: 300px; }
+
+  /* === Skills/Projects === */
+  .skills-container, .projects-box { gap: 1.5rem; }
+
+  /* === Contact Form === */
+  .contact form input, 
+  .contact form textarea { padding: 1.8rem; }
+
+  /* === Phones (≤480px) === */
+@media (max-width: 480px) {
+  :root { --header-height: 6rem; }
+  .home-content h1 { font-size: 3.8rem; }
+  .btn-group { flex-direction: column; width: 100%; }
+}
+
+  /* === KEEP YOUR EXISTING STYLES BELOW === */
+  section { padding: var(--mobile-section-padding); min-height: auto; }
+
   section {
     padding: var(--mobile-section-padding);
     min-height: auto;
