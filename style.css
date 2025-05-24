@@ -1255,6 +1255,69 @@ textarea:focus:invalid {
 }
 
 @media (max-width: 768px) {
+
+.logo .logo-stack .sk-text {
+    font-size: 3rem !important;
+    letter-spacing: 3px;
+  }
+  
+  #menu-icon {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+  }
+  
+  .theme-toggle {
+    right: 70px;
+    top: 25px;
+  }
+}
+
+.home-content {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .typing-wrapper {
+    justify-content: center;
+  }
+  
+  .home-content p {
+    text-align: center;
+    max-width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-group a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .read-more-btn {
+    margin: 1.5rem auto 0;
+    display: block;
+    width: fit-content;
+  }
+
+  .navbar.active {
+    width: 100%;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    border: none;
+    border-top: 2px solid var(--main-color);
+  }
+  
+  .navbar a {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
   /* === Mobile Header === */
   :root { --header-height: 7rem; }
   .header { padding: 1.5rem 5%; }
