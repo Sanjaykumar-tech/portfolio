@@ -1256,7 +1256,7 @@ textarea:focus:invalid {
 
 @media (max-width: 768px) {
 
-.logo .logo-stack .sk-text {
+  .logo .logo-stack .sk-text {
     font-size: 3rem !important;
     letter-spacing: 3px;
   }
@@ -1271,9 +1271,8 @@ textarea:focus:invalid {
     right: 70px;
     top: 25px;
   }
-}
 
-.home-content {
+  .home-content {
     text-align: center;
     align-items: center;
   }
