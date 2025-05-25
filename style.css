@@ -1253,197 +1253,155 @@ textarea:focus:invalid {
   }
 }
 
+/* ====================================================
+   MOBILE RESPONSIVE STYLES (768px and below)
+==================================================== */
 @media (max-width: 768px) {
+  /* === Core Variables === */
+  :root {
+    --header-height: 7rem;
+  }
+
+  /* === Header & Navigation === */
+  .header {
+    padding: 1.5rem 5%;
+  }
 
   .logo .logo-stack .sk-text {
-    font-size: 3rem !important;
+    font-size: 3rem;
     letter-spacing: 3px;
   }
-  
+
   #menu-icon {
     position: absolute;
     right: 15px;
     top: 25px;
+    background: transparent;
+    width: auto;
+    height: auto;
+    padding: 0;
   }
 
-  #menu-icon {
-    background: transparent !important;
-    width: auto !important;
-    height: auto !important;
-    padding: 0 !important;
-  }
-  
   #menu-icon i.bx-menu {
-    color: var(--main-color) !important; /* Green color */
-    font-size: 3.2rem !important;
+    color: var(--main-color);
+    font-size: 3.2rem;
     text-shadow: 0 0 5px rgba(0,128,0,0.3);
   }
-  
+
   .theme-toggle {
     right: 70px;
     top: 25px;
-  }
-
-  .home-content {
-    text-align: center;
-    align-items: center;
-  }
-  
-  .typing-wrapper {
-    justify-content: center;
-  }
-  
-  .home-content p {
-    text-align: center;
-    max-width: 90%;
-    margin: 1.5rem auto;
-  }
-
-  .btn-group {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .btn-group a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .btn-group .btn {
-    padding: 1.2rem 2rem !important;
-    font-size: 1.4rem !important;
-    min-width: 120px !important;
-  }
-  
-  .btn-group {
-    gap: 1rem !important;
-    justify-content: center !important;
-  }
-
-  .read-more-btn {
-    margin: 1.5rem auto 0;
-    display: block;
-    width: fit-content;
-  }
-
-  .navbar.active {
-    width: 100%;
-    left: 0;
-    transform: none;
-    border-radius: 0;
-    border: none;
-    border-top: 2px solid var(--main-color);
-  }
-  
-  .navbar a {
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .home {
-    padding-top: 2rem !important;
-  }
-  
-  .home-content {
-    gap: 1.5rem !important;
-  }
-
-  /* === Mobile Header === */
-  :root { --header-height: 7rem; }
-  .header { padding: 1.5rem 5%; }
-
-  /* === Home Section === */
-  .home { margin-top: 3rem; gap: 3rem; }
-  .home-content h1 { font-size: 4.5rem; }
-  .home-img img { width: 80vw; max-width: 300px; }
-
-  /* === About Section === */
-  .about { gap: 4rem; }
-  .about-img img { width: 80vw; max-width: 300px; }
-
-  /* === Skills/Projects === */
-  .skills-container, .projects-box { gap: 1.5rem; }
-
-  /* === Contact Form === */
-  .contact form input, 
-  .contact form textarea { padding: 1.8rem; }
-
-  /* === Phones (≤480px) === */
-@media (max-width: 480px) {
-  :root { --header-height: 6rem; }
-  .home-content h1 { font-size: 3.8rem; }
-  .btn-group { flex-direction: column; width: 100%; }
-}
-
-  /* === KEEP YOUR EXISTING STYLES BELOW === */
-  section { padding: var(--mobile-section-padding); min-height: auto; }
-
-  section {
-    padding: var(--mobile-section-padding);
-    min-height: auto;
-  }
-
-  .header {
-    padding: 2rem 5%;
   }
 
   .navbar {
     width: 100%;
   }
 
+  .navbar.active {
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    border-top: 2px solid var(--main-color);
+  }
+
+  .navbar a {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  /* === Home Section === */
+  .home {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    gap: 3rem;
+    flex-direction: column-reverse;
+  }
+
+  .home-content {
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   .home-content h3,
   .typing-wrapper {
     font-size: 3rem;
+    justify-content: center;
   }
 
   .home-content p {
     font-size: 1.4rem;
     max-width: 90%;
+    margin: 1.5rem auto;
   }
 
   .home-img img {
-    width: 70vw;
-    margin-top: 2rem;
+    width: 80vw;
+    max-width: 300px;
+  }
+
+  /* === Buttons === */
+  .btn-group {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+    min-width: 120px;
+  }
+
+  /* === About Section === */
+  .about {
+    gap: 4rem;
   }
 
   .about-content h2 {
     font-size: 4rem;
   }
 
-  .about-content p {
-    font-size: 1.6rem;
+  .read-more-btn {
+    margin: 1.5rem auto 0;
+    width: fit-content;
   }
 
-  .about-img img {
-    width: 70vw;
-  }
-
-  .skills .heading,
-  .projects .heading,
-  .contact .heading {
-    font-size: 4rem;
-  }
-
+  /* === Skills/Projects === */
   .skills-container,
   .projects-box {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .btn-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
+  /* === Footer === */
   .footer ul {
     font-size: 1.6rem;
+  }
+}
+
+/* ====================================================
+   SMALL PHONE OPTIMIZATIONS (480px and below)
+==================================================== */
+@media (max-width: 480px) {
+  :root {
+    --header-height: 6rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.8rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* Safari/iOS specific fixes */
+  .header {
+    padding-top: max(1.5rem, env(safe-area-inset-top));
   }
 }
 
