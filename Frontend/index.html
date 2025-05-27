@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet" crossorigin>
   
+  
   <!-- Structured data for SEO -->
   <script type="application/ld+json">
   {
@@ -104,7 +105,7 @@
       </div>
       <div class="btn-group">
         <a href="#contact" class="btn">Hire Me</a>
-        <a href="sanjaykumar_CV.pdf" class="btn" download="Sanjaykumar_CV.pdf">Download CV</a>
+        <a href="Sanjaykumar_CV.pdf" class="btn" download="Sanjaykumar_Resume.pdf" id="cvDownload">Download CV</a>
       </div>
     </div>
     <div class="home-img">
@@ -234,25 +235,49 @@
 </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-    <form id="contactForm" novalidate>
-      <div class="input-group">
-        <div class="input-box">
-          <input type="text" name="name" placeholder="Full Name" required aria-label="Full Name" aria-required="true">
-          <input type="email" name="email" placeholder="Email" required aria-label="Email" aria-required="true">
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+  <form id="contactForm" novalidate>
+    <div class="input-group">
+      <div class="input-box">
+        <div class="input-wrapper">
+          <input type="text" name="name" placeholder="Full Name" required 
+                 aria-label="Full Name" aria-required="true" aria-invalid="false"
+                 data-error="Please enter your name">
+          <span class="error-message" aria-live="polite"></span>
         </div>
-        <div class="input-box">
-          <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number (optional)">
-          <input type="text" name="subject" placeholder="Subject" aria-label="Subject (optional)">
+        <div class="input-wrapper">
+          <input type="email" name="email" placeholder="Email" required
+                 aria-label="Email" aria-required="true" aria-invalid="false"
+                 data-error="Please enter a valid email">
+          <span class="error-message" aria-live="polite"></span>
         </div>
       </div>
-      <div class="input-group-2">
-        <textarea name="message" placeholder="Your Message" required aria-label="Your Message" aria-required="true"></textarea>
-        <button type="submit" class="btn">Send Message</button>
+      <div class="input-box">
+        <div class="input-wrapper">
+          <input type="tel" name="phone" placeholder="Phone Number" 
+                 aria-label="Phone Number (optional)" pattern="[\d\s\+\-\(\)]{10,15}"
+                 aria-invalid="false" data-error="Please enter a valid phone number">
+          <span class="error-message" aria-live="polite"></span>
+        </div>
+        <div class="input-wrapper">
+          <input type="text" name="subject" placeholder="Subject" 
+                 aria-label="Subject (optional)" aria-invalid="false">
+          <span class="error-message" aria-live="polite"></span>
+        </div>
       </div>
-    </form>
-  </section>
+    </div>
+    <div class="input-group-2">
+      <div class="input-wrapper">
+        <textarea name="message" placeholder="Your Message" required
+                 aria-label="Your Message" aria-required="true" aria-invalid="false"
+                 data-error="Please enter your message (max 1000 chars)" maxlength="1000"></textarea>
+        <span class="error-message" aria-live="polite"></span>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </div>
+  </form>
+</section>
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -278,9 +303,13 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <p class="copyright">&copy; <span id="current-year"></span> Sanjaykumar | All Rights Reserved</p>
-    <a href="#home" class="back-to-top" aria-label="Back to top">
-      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+   <a href="#home" class="back-to-top" aria-label="Back to top">
+      <svg class="back-to-top-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
     </a>
+
+    
   </footer>
 
   <!-- Scripts -->
