@@ -5,7 +5,8 @@
 
 A modern, responsive portfolio showcasing my frontend development skills and projects.
 
-![Portfolio Preview](./assets/images/portfolio-preview.png)
+![Portfolio Preview](./assets/images/![Uploading portfolio.preview.png…]()
+)
 
 ## ✨ Key Features
 
@@ -34,7 +35,7 @@ A modern, responsive portfolio showcasing my frontend development skills and pro
 - npm/yarn
 
 ### Installation
-```bash
+bash
 # Clone the repository
 git clone https://github.com/Sanjaykumar-tech/portfolio_frontend.git
 
@@ -46,3 +47,5 @@ npm install
 
 # Run development server
 npm start
+
+re wright
